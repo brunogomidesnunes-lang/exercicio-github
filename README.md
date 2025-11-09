@@ -1,16 +1,24 @@
-# lista_tarefas2
+Sistema de Controle de Tarefas Estudantis
+ALUNO 1: Marlon José Francisco correia da Silva
+ ALUNO 2: Bruno Henrique Gomides Nunes
+ALUNO 3:  Josciel pereira da silva
 
-A new Flutter project.
 
-## Getting Started
+Project Charter 
+Título: Sistema de Controle de Tarefas Estudantis
+Problema: Muitos estudantes têm dificuldade em organizar prazos de atividades e trabalhos, o que impacta na produtividade e no desempenho acadêmico.
+Público-alvo: Estudantes de ensino médio e universitários.
+Objetivo: Desenvolver uma aplicação web simples que permita cadastrar, acompanhar e marcar tarefas como concluídas.
+Métricas de sucesso:
+80% dos usuários conseguem cadastrar e concluir uma tarefa sem ajuda.
+Sistema funcional com pelo menos 3 funcionalidades principais (criar, editar e excluir tarefas).
+Interface amigável e responsiva.
+Plano de comunicação:
+Comunicação via grupo no WhatsApp/Discord.
+Reuniões semanais rápidas (15 min).
+Atualizações no GitHub via issues e commits.
+Papéis da equipe:
+Scrum Master: Marlon José Francisco correia da Silva
+Product Owner: Josciel pereira da silva
+Desenvolvedores: Bruno Henrique Gomides Nunes
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
