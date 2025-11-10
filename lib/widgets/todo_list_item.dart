@@ -4,10 +4,11 @@ import '../models/todo.dart';
 import 'package:slideable/Slideable.dart';
 
 class TodoListItem extends StatelessWidget {
-  const TodoListItem({super.key, required this.todo, required this.onDelete});
+  const TodoListItem({super.key, required this.todo, required this.onDelete,required this.onEdit,});
 
   final Todo todo;
   final Function(Todo) onDelete;
+  final Function(Todo) onEdit;
 
   @override
   Widget build(BuildContext context) {
@@ -24,6 +25,7 @@ class TodoListItem extends StatelessWidget {
         ActionItems(
           icon: const Icon(Icons.edit, color: Colors.blue),
           onPress: () {
+            onEdit(todo);
             print('Abrir tela de Edição para: ${todo.title}');
           },
           backgroudColor: Colors.transparent,
@@ -51,6 +53,6 @@ class TodoListItem extends StatelessWidget {
           ),
         ),
       ),
-    ); // Parêntese extra removido aqui!
+    );
   }
 }
