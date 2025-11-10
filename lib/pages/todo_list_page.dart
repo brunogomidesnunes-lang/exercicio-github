@@ -111,6 +111,7 @@ class _TodoListPageState extends State<TodoListPage> {
                           todo: todo,
                           onDelete: onDelete,
                           onEdit: onEdit,
+                          onToggleComplete: onToggleComplete,
                         ),
                     ],
                   ),
@@ -146,51 +147,41 @@ class _TodoListPageState extends State<TodoListPage> {
   }
 
   void onEdit(Todo todo) {
-    // Cria um controlador de texto e já o preenche com o título atual da tarefa
     final TextEditingController editController =
     TextEditingController(text: todo.title);
 
-    // Exibe um diálogo de alerta
     showDialog(
       context: context,
       builder: (context) {
         return AlertDialog(
           title: Text('Editar Tarefa'),
-          // Campo de texto para edição
           content: TextField(
             controller: editController,
-            autofocus: true, // Foca automaticamente no campo
+            autofocus: true,
             decoration: InputDecoration(
               labelText: 'Novo título',
               hintText: 'Digite o novo título da tarefa',
             ),
           ),
           actions: [
-            // Botão de Cancelar
             TextButton(
               child: Text('Cancelar'),
               onPressed: () {
-                Navigator.of(context).pop(); // Apenas fecha o diálogo
+                Navigator.of(context).pop();
               },
             ),
-            // Botão de Salvar
             TextButton(
               child: Text('Salvar'),
               onPressed: () {
                 String newTitle = editController.text;
                 if (newTitle.isNotEmpty) {
-                  // Se o texto não estiver vazio
                   setState(() {
-                    // Atualiza o título do objeto 'todo'
                     todo.title = newTitle;
-                    // Opcional: atualizar a data da modificação
                     // todo.dateTime = DateTime.now();
                   });
-                  // Salva a lista inteira (com o item modificado) na persistência
                   todoRepository.saveTodoList(todos);
-                  Navigator.of(context).pop(); // Fecha o diálogo
+                  Navigator.of(context).pop();
                 }
-                // Você pode adicionar um 'errorText' no diálogo aqui também, se desejar
               },
             ),
           ],
@@ -230,18 +221,12 @@ class _TodoListPageState extends State<TodoListPage> {
     );
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
+  void onToggleComplete(Todo todo) {
+    setState(() {
+      todo.isDone = !todo.isDone;
+    });
+    todoRepository.saveTodoList(todos);
+  }
 
 
 
