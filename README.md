@@ -1,5 +1,4 @@
 Sistema de Controle de Tarefas Estudantis
-
 ALUNO 1: Marlon José Francisco correia da Silva
 ALUNO 2: Bruno Henrique Gomides Nunes
 ALUNO 3:  Josciel pereira da silva
