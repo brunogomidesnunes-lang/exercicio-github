@@ -10,7 +10,7 @@ Título: Sistema de Controle de Tarefas Estudantis
 Problema: Muitos estudantes têm dificuldade em organizar prazos de atividades e trabalhos,
 que impacta na produtividade e no desempenho acadêmico.
 Público-alvo: Estudantes de ensino médio e universitários.
-Objetivo: Desenvolver uma aplicação web simples que permita cadastrar,
+Objetivo: Desenvolver uma aplicação em flutter simples que permita cadastrar,
 acompanhar e marcar tarefas como concluídas.
 
 Métricas de sucesso:
